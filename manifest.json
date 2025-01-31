@@ -1,0 +1,17 @@
+{
+    "name": "pwareceitas",
+    "short_name": "pwareceitas",
+    "description": "Aplicativo para armazenar e planejar receitas de refeições",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+      {
+        "src": "images/icon1.jpeg",
+        "sizes": "256x256",
+        "type": "image/jpeg"
+      }
+    ]
+  }
+  
