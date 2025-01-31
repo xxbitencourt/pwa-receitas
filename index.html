@@ -1,13 +1,80 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt">
+
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Receitas e Planejamento de Refeições</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o manifesto da aplicação, usado para Progressive Web App -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- Link para o ícone de atalho em dispositivos -->
+    <link rel="apple-touch-icon" href="">
+    <!-- Link para o favicon, ícone exibido na aba do navegador -->
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="white" />
   </head>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <!-- Cabeçalho com o título da página -->
+    <h1>Receitas & Planejamento de Refeições</h1>
+
+    <!-- Seção para captura de foto usando a câmera -->
+    <div id="camera-container">
+        <!-- Elemento para visualizar o vídeo da câmera -->
+        <video id="camera-view" autoplay></video>
+        <!-- Elemento de canvas onde a foto será capturada -->
+        <canvas id="camera-sensor"></canvas>
+        <!-- Elemento de imagem para mostrar a foto capturada -->
+        <img id="camera-output">
+        <!-- Botões de controle da câmera -->
+        <div class="camera-buttons">
+            <!-- Botão para tirar foto -->
+            <button id="camera-trigger">Tirar Foto</button>
+            <!-- Botão para trocar entre as câmeras (frontal/traseira) -->
+            <button id="camera-toggle">Trocar Câmera</button>
+            <!-- Botão para desligar a câmera -->
+            <button id="camera-stop">Desligar Câmera</button>
+            <!-- Botão para ligar a câmera -->
+            <button id="camera-start">Ligar Câmera Novamente</button>
+        </div>
+    </div>
+
+    <!-- Formulário para adicionar uma nova receita -->
+    <div id="receita-form">
+        <!-- Campo para o nome da receita -->
+        <input type="text" id="nome-receita" placeholder="Nome da Receita">
+        <!-- Área de texto para os ingredientes da receita -->
+        <textarea id="ingredientes-receita" placeholder="Ingredientes"></textarea>
+        <!-- Área de texto para a descrição da receita -->
+        <textarea id="descricao-receita" placeholder="Descrição da Receita"></textarea>
+        <!-- Campo para o nome do autor da receita -->
+        <input type="text" id="autor-receita" placeholder="Seu Nome">
+        <!-- Botão para salvar a receita -->
+        <button id="add-receita">Salvar Receita</button>
+    </div>
+
+    <!-- Seção para capturar a localização geográfica -->
+    <div id="localizacao-container">
+        <!-- Botão para capturar a localização -->
+        <button id="localizacao">Capturar Localização</button>
+        <!-- Elementos para exibir a latitude e longitude -->
+        <p id="latitude"></p>
+        <p id="longitude"></p>
+    </div>
+
+    <!-- Botão para listar todas as receitas salvas -->
+    <button id="mostrar-receitas">Listar Receitas</button>
+
+    <!-- Lista de receitas, inicialmente oculta -->
+    <div id="receitas-container" class="hidden">
+        <h2>Receitas Salvas</h2>
+        <!-- Área onde as receitas salvas serão exibidas -->
+        <div id="receitas-list"></div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript, utilizado para interatividade -->
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
