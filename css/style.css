@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+#camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+video, img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.camera-buttons button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#receita-form, #localizacao-container {
+    margin: 20px 0;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #b39283;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #b39283;
+    color: white;
+}
+
+button:hover {
+    background-color: #b39283;
+}
+
+/* CONTAINER DE RECEITAS (INICIALMENTE OCULTO) */
+.hidden {
+    display: none;
+}
+
+/* GRID DE RECEITAS */
+#receitas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.receita-card {
+    background: #b39283;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.receita-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.receita-card h3 {
+    margin: 10px 0 5px;
+}
+
+.receita-card p {
+    font-size: 14px;
+    color: #ffff;
+}
